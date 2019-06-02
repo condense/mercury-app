@@ -1,8 +1,7 @@
 (ns mercury-app.ios.core
   (:require [reagent.core :as r :refer [atom]]
             [re-frame.core :refer [subscribe dispatch dispatch-sync]]
-            [mercury-app.events]
-            [mercury-app.subs]
+            [mercury-app.core]
             [interop.react-native :as rn]))
 
 
