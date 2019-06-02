@@ -1,5 +1,6 @@
 (ns interop.react-native
-  (:require [reagent.core :as r]))
+  (:require [reagent.core :as r]
+            [interop.react :as react]))
 
 (set! *warn-on-infer* true)
 
@@ -23,12 +24,11 @@
 (def ImageBackground (.-ImageBackground ReactNative))
 (def image-background (r/adapt-react-class ImageBackground))
 (def ImageEditor (.-ImageEditor ReactNative))
-(def ImageStore (.-ImageStore ReactNative))
+;(def ImageStore (.-ImageStore ReactNative))
 (def KeyboardAvoidingView (.-KeyboardAvoidingView ReactNative))
-(def MaskedViewIOS (.-MaskedViewIOS ReactNative))
+;(def MaskedViewIOS (.-MaskedViewIOS ReactNative))
 (def Modal (.-Modal ReactNative))
 (def modal (r/adapt-react-class Modal))
-(def NavigatorIOS (.-NavigatorIOS ReactNative))
 (def Picker (.-Picker ReactNative))
 (def picker (r/adapt-react-class Picker))
 (def Item (.-Item Picker))
@@ -43,7 +43,7 @@
 (def SectionList (.-SectionList ReactNative))
 (def section-list (r/adapt-react-class SectionList))
 (def SegmentedControlIOS (.-SegmentedControlIOS ReactNative))
-(def Slider (.-Slider ReactNative))
+;(def Slider (.-Slider ReactNative))
 (def SnapshotViewIOS (.-SnapshotViewIOS ReactNative))
 (def Switch (.-Switch ReactNative))
 (def switch (r/adapt-react-class Switch))
@@ -103,7 +103,7 @@
 (def LayoutAnimation (.-LayoutAnimation ReactNative))
 (def Linking (.-Linking ReactNative))
 (def NativeEventEmitter (.-NativeEventEmitter ReactNative))
-(def NetInfo (.-NetInfo ReactNative))
+;(def NetInfo (.-NetInfo ReactNative))
 (def PanResponder (.-PanResponder ReactNative))
 (def PermissionsAndroid (.-PermissionsAndroid ReactNative))
 (def PixelRatio (.-PixelRatio ReactNative))
