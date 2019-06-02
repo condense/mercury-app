@@ -23,13 +23,13 @@
 (defn handle-navigator-ref [navigator]
   (s/assert (s/nilable ::react-navigation/navigator) navigator)
   (if navigator
-    (rf/dispatch [:navigation/init navigator])
-    (rf/dispatch [:navigation/reset])))
+    (rf/dispatch [:navigator/init navigator])
+    (rf/dispatch [:navigator/reset])))
 
 (defn handle-navigation-change
   [_ _ action]
   (s/assert ::react-navigation/navigation-action action)
-  (rf/dispatch [:navigation/change {:action-type (gobj/get action "type")}]))
+  (rf/dispatch [:navigator/change {:action-type (gobj/get action "type")}]))
 
 (defn app-root []
   [:> AppContainer {:ref handle-navigator-ref :onNavigationStateChange handle-navigation-change}])

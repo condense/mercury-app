@@ -4,20 +4,20 @@
             [interop.react-navigation :as react-navigation]))
 
 (rf/reg-event-fx
-  :navigation/init
+  :navigator/init
   [rf/debug]
   (fn [{:keys [db]} [_ navigator]]
     (s/assert ::react-navigation/navigator navigator)
     {:navigator/init {:navigator navigator :state (:nav/state db)}}))
 
 (rf/reg-event-fx
-  :navigation/reset
+  :navigator/reset
   [rf/debug]
   (fn [{:keys [db]} _]
     {:navigator/reset nil}))
 
 (rf/reg-event-fx
-  :navigation/change
+  :navigator/change
   [(rf/inject-cofx :navigation/route) (rf/inject-cofx :navigation/state-json)]
   (fn [{:keys [react-navigation/route react-navigation/state-json db]} [_ {:keys [action-type]}]]
     (case action-type
