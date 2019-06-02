@@ -5,7 +5,10 @@
     "dev": "env/dev",
     "prod": "env/prod"
   },
-  "modules": [],
+  "modules": [
+    "react-native-gesture-handler",
+    "react-navigation"
+  ],
   "imageDirs": [
     "images"
   ],
