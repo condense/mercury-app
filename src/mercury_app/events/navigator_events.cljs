@@ -18,7 +18,7 @@
 
 (rf/reg-event-fx
   :navigator/change
-  [(rf/inject-cofx :navigation/route) (rf/inject-cofx :navigation/state-json)]
+  [(rf/inject-cofx :navigator/route) (rf/inject-cofx :navigator/state-json)]
   (fn [{:keys [react-navigation/route react-navigation/state-json db]} [_ {:keys [action-type]}]]
     (case action-type
       ("Navigation/NAVIGATE" "Navigation/BACK" "Navigation/SET_PARAMS" "Navigation/POP" "Navigation/POP_TO_TOP" "Navigation/PUSH" "Navigation/RESET" "Navigation/REPLACE")
