@@ -6,6 +6,7 @@
     "prod": "env/prod"
   },
   "modules": [
+    "react",
     "react-native-gesture-handler",
     "react-navigation"
   ],
