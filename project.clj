@@ -18,7 +18,8 @@
                                     ["with-profile" "advanced" "cljsbuild" "once"]]}
             :jvm-opts ["-XX:+IgnoreUnrecognizedVMOptions" "--add-modules=java.xml.bind"]
             :profiles {:dev {:dependencies [[figwheel-sidecar "0.5.18"]
-                                            [cider/piggieback "0.4.0"]]
+                                            [cider/piggieback "0.4.0"]
+                                            [binaryage/devtools "0.9.10"]]
                              :source-paths ["src" "env/dev"]
                              :cljsbuild    {:builds [
                                                      {:id           "ios"

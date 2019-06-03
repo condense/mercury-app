@@ -3,10 +3,11 @@
             [re-frame.core :refer [clear-subscription-cache!]]
             [mercury-app.ios.core :as core]
             [figwheel.client :as fw]
-            [env.config :as conf]))
+            [env.config :as conf]
+            [devtools.core :as devtools]))
 
 (enable-console-print!)
-
+(devtools/install!)
 (assert (exists? core/init) "Fatal Error - Your core.cljs file doesn't define an 'init' function!!! - Perhaps there was a compilation failure?")
 (assert (exists? core/app-root) "Fatal Error - Your core.cljs file doesn't define an 'app-root' function!!! - Perhaps there was a compilation failure?")
 
